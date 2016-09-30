@@ -137,7 +137,7 @@ This returns:
 DoggySammy
 ```
 
-More info can be found in: 
+More info can be found in:  <br />
 [Catching up with JS higher order functions](https://www.airpair.com/javascript/posts/catching-up-with-javascript-higher-order-functions)<br />
 [Fun with higher order functions](https://derickbailey.com/2015/10/21/fun-with-higher-order-functions-in-javascript/)<br />
 [Elquent Javascript - Higher Order functions](http://eloquentjavascript.net/05_higher_order.html)
