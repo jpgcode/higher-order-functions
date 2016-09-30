@@ -2,9 +2,9 @@
 
 //Using array methods
 
-var higherOrderFunctionsModule = (function(){
+const higherOrderFunctionsModule = (function(){
 
-	var animals = [
+	const animals = [
 		{name: 'Milo', type: 'cat', eyes: 2},
 		{name: 'Peluza', type: 'cat', eyes: 2},
 		{name: 'Yummy', type: 'cat', eyes: 2},
@@ -12,7 +12,7 @@ var higherOrderFunctionsModule = (function(){
 		{name: 'Sammy', type: 'dog', eyes: 2}
 	];
 
-	var init = function(){
+	const init = function(){
 		//Get all animals (map)
 		console.log('---');
 		console.log('all animals (map)');
@@ -55,10 +55,10 @@ var higherOrderFunctionsModule = (function(){
 	}
 
 	//Map example
-	var getAnimals = animals.map(animal => `${animal.name} is a ${animal.type}`);
+	const getAnimals = animals.map(animal => `${animal.name} is a ${animal.type}`);
 
 	//Foreach example
-	var getAnimals2 = animals.forEach((animal) => `${animal.name} is a ${animal.type}`);
+	const getAnimals2 = animals.forEach((animal) => `${animal.name} is a ${animal.type}`);
 
 	/*
 	The "side effect" with forEach is that the original array is being changed. 
@@ -66,22 +66,22 @@ var higherOrderFunctionsModule = (function(){
 	*/
 
 	//Filter example
-	var dogs = animals.filter(animal => animal.type === 'dog');
+	const dogs = animals.filter(animal => animal.type === 'dog');
 
 	//Find example
-	var sammy = animals.find(animal => animal.name === 'Sammy');
+	const sammy = animals.find(animal => animal.name === 'Sammy');
 
 	//Some example
-	var thereAreCats = animals.some(animal => animal.type === 'cat');
+	const thereAreCats = animals.some(animal => animal.type === 'cat');
 
 	//Every example
-	var areAllDogs = animals.every(animal => animal.type === 'dog');
+	const areAllDogs = animals.every(animal => animal.type === 'dog');
 
 	//Reduce example
-	var fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
+	const fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
 
 
-	var getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
+	const getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
 		.reduce((newName, animal) => newName+animal.name, '');
 
 
