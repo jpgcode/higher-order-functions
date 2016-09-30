@@ -29,12 +29,12 @@ var animals = [
 It iterates over an array and return a new array with the changes you do to it.
 
 Using map method:
-```
+```js
 const getAnimals = animals.map(animal => `${animal.name} is a ${animal.type}`);
 ```
 
 This returns:
-```
+```js
 [ 'Milo is a cat',
   'Peluza is a cat',
   'Yummy is a cat',
@@ -46,7 +46,7 @@ This returns:
 It iterates over an array and does not return anything unless you do it manually.
 
 Using the forEach method:
-```
+```js
 const getAnimals2 = animals.forEach((animal) => `${animal.name} is a ${animal.type}`);
 ```
 
@@ -63,7 +63,7 @@ const dogs = animals.filter(animal => animal.type === 'dog');
 ```
 
 This returns the following:
-```
+```js
 [ { name: 'Doggy', type: 'dog', eyes: 2 },
   { name: 'Sammy', type: 'dog', eyes: 2 } ]
 ```
@@ -72,7 +72,7 @@ This returns the following:
 It iterates over an array and return only 1 element, the first that matches with your conditional.
 
 Using the find method to get only one element:
-```
+```js
 const sammy = animals.find(animal => animal.name === 'Sammy');
 ```
 
@@ -82,7 +82,7 @@ This returns: `{ name: 'Sammy', type: 'dog', eyes: 2 }`
 It iterates over an array and return true if one of the items matches with the condition passed.
 
 Using the check if there are cats in our array:
-```
+```js
 const thereAreCats = animals.some(animal => animal.type === 'cat');
 ```
 
@@ -92,7 +92,7 @@ This returns: `true`
 It iterates over an array and return true if ALL of the items matches with the condition passed.
 
 Using the check if all the animals are dogs:
-```
+```js
 const areAllDogs = animals.every(animal => animal.type === 'dog');
 ```
 
@@ -102,7 +102,7 @@ This returns: `false`
 It iterates over an array and reduce it, using an accumulator logic, which merge the items inside the array, returning a new merged element.
 
 Fusion all the animal names:
-```
+```js
 const fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
 ```
 
@@ -112,7 +112,7 @@ This returns: `MiloPeluzaYummyDoggySammy`
 We can use the previous methods together, chaining them one after the other.
 
 Get all dogs and fusion their names
-```
+```js
 const getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
 		.reduce((newName, animal) => newName+animal.name, '');
 ```
