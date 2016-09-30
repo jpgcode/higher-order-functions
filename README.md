@@ -33,7 +33,7 @@ Using map method:
 const getAnimals = animals.map(animal => `${animal.name} is a ${animal.type}`);
 ```
 
-This returns the following:
+This returns:
 ```
 [ 'Milo is a cat',
   'Peluza is a cat',
@@ -50,10 +50,7 @@ Using the forEach method:
 const getAnimals2 = animals.forEach((animal) => `${animal.name} is a ${animal.type}`);
 ```
 
-This returns the following:
-```
-undefined
-```
+This returns: `undefined`
 
 On this case we will need to create a new array manually if we want to have the same result of the `map` method.
 
@@ -79,10 +76,7 @@ Using the find method to get only one element:
 const sammy = animals.find(animal => animal.name === 'Sammy');
 ```
 
-This returns the following:
-```
-{ name: 'Sammy', type: 'dog', eyes: 2 }
-```
+This returns: `{ name: 'Sammy', type: 'dog', eyes: 2 }`
 
 ##Some
 It iterates over an array and return true if one of the items matches with the condition passed.
@@ -92,10 +86,7 @@ Using the check if there are cats in our array:
 const thereAreCats = animals.some(animal => animal.type === 'cat');
 ```
 
-This returns the following:
-```
-true
-```
+This returns: `true`
 
 ##Every
 It iterates over an array and return true if ALL of the items matches with the condition passed.
@@ -105,10 +96,7 @@ Using the check if all the animals are dogs:
 const areAllDogs = animals.every(animal => animal.type === 'dog');
 ```
 
-This returns the following:
-```
-false
-```
+This returns: `false`
 
 ##Reduce
 It iterates over an array and reduce it, using an accumulator logic, which merge the items inside the array, returning a new merged element.
@@ -118,10 +106,7 @@ Fusion all the animal names:
 const fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
 ```
 
-This returns the following:
-```
-MiloPeluzaYummyDoggySammy
-```
+This returns: `MiloPeluzaYummyDoggySammy`
 
 ##Chaining methods
 We can use the previous methods together, chaining them one after the other.
@@ -132,10 +117,7 @@ const getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
 		.reduce((newName, animal) => newName+animal.name, '');
 ```
 
-This returns:
-```
-DoggySammy
-```
+This returns: `DoggySammy`
 
 More info can be found in:  <br />
 [Catching up with JS higher order functions](https://www.airpair.com/javascript/posts/catching-up-with-javascript-higher-order-functions)<br />
