@@ -85,7 +85,7 @@ const higherOrderFunctionsModule = (function(){
 		.reduce((newName, animal) => newName+animal.name, '');
 
 
-	//Auto execute itself
+	//Fire the init method 
 	init();
 
 })();
