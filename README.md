@@ -1,4 +1,11 @@
 #Higher order functions
+A higher-order function is a function that does at least one of the following:
+
+> Takes one or more functions as an input
+> Outputs a function
+
+All other functions are first-order functions.
+
 
 <p align="center">
     <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/demo/intro.jpg">

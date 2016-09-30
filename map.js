@@ -81,7 +81,7 @@ var higherOrderFunctionsModule = (function(){
 
 })();
 
-
-//
+//https://www.airpair.com/javascript/posts/catching-up-with-javascript-higher-order-functions
+//https://derickbailey.com/2015/10/21/fun-with-higher-order-functions-in-javascript/
 //http://eloquentjavascript.net/05_higher_order.html
 
