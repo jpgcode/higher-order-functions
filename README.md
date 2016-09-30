@@ -1,8 +1,8 @@
 #Higher order functions
 A higher-order function is a function that does at least one of the following:
 
-> Takes one or more functions as an input
-> Outputs a function
+-Takes one or more functions as an input
+-Outputs a function
 
 All other functions are first-order functions.
 
@@ -13,10 +13,8 @@ All other functions are first-order functions.
 
 > Experiments with higher order functions (array methods)
 
-##Map
-It iterates over an array and return a new array with the changes you do to it.
 
-We have this array:
+Use this array for all our examples:
 ```
 var animals = [
 	{name: 'Milo', type: 'cat', eyes: 2},
@@ -26,8 +24,10 @@ var animals = [
 	{name: 'Sammy', type: 'dog', eyes: 2}
 ];
 ```
+##Map
+It iterates over an array and return a new array with the changes you do to it.
 
-Then we use the map method:
+Using map method:
 ```
 var getAnimals = animals.map(animal => `${animal.name} is a ${animal.type}`);
 ```
@@ -40,6 +40,102 @@ This returns the following:
   'Doggy is a dog',
   'Sammy is a dog' ]
 ```
+
+##ForEach
+It iterates over an array and does not return anything unless you do it manually.
+
+Using the forEach method:
+```
+var getAnimals2 = animals.forEach((animal) => `${animal.name} is a ${animal.type}`);
+```
+
+This returns the following:
+```
+undefined
+```
+
+On this case we will need to create a new array manually if we want to have the same result of the `map` method.
+
+##Filter
+It iterates over an array and return a filtered results based on a conditional passed inside the function.
+
+Using the filter method to get only dogs:
+```
+var dogs = animals.filter(animal => animal.type === 'dog');
+```
+
+This returns the following:
+```
+[ { name: 'Doggy', type: 'dog', eyes: 2 },
+  { name: 'Sammy', type: 'dog', eyes: 2 } ]
+```
+
+##Find
+It iterates over an array and return only 1 element, the first that matches with your conditional.
+
+Using the find method to get only one element:
+```
+var sammy = animals.find(animal => animal.name === 'Sammy');
+```
+
+This returns the following:
+```
+{ name: 'Sammy', type: 'dog', eyes: 2 }
+```
+
+##Some
+It iterates over an array and return true if one of the items matches with the condition passed.
+
+Using the check if there are cats in our array:
+```
+var thereAreCats = animals.some(animal => animal.type === 'cat');
+```
+
+This returns the following:
+```
+true
+```
+
+##Every
+It iterates over an array and return true if ALL of the items matches with the condition passed.
+
+Using the check if all the animals are dogs:
+```
+var areAllDogs = animals.every(animal => animal.type === 'dog');
+```
+
+This returns the following:
+```
+false
+```
+
+##Reduce
+It iterates over an array and reduce it, using an accumulator logic, which merge the items inside the array, returning a new merged element.
+
+Fusion all the animal names:
+```
+var fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
+```
+
+This returns the following:
+```
+MiloPeluzaYummyDoggySammy
+```
+
+##Chaining methods
+We can use the previous methods together, chaining them one after the other.
+
+Get all dogs and fusion their names
+```
+var getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
+		.reduce((newName, animal) => newName+animal.name, '');
+```
+
+This returns:
+```
+DoggySammy
+```
+
 
 ## Authors
 

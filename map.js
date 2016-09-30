@@ -47,6 +47,11 @@ var higherOrderFunctionsModule = (function(){
 		console.log('---');
 		console.log('check if ALL are dogs');
 		console.log(areAllDogs);
+
+		//Get all dogs and fusion them
+		console.log('---');
+		console.log('Merge the dogs and fusion them');
+		console.log(getDogsAndFusionThem);
 	}
 
 	//Map example
@@ -70,10 +75,14 @@ var higherOrderFunctionsModule = (function(){
 	var thereAreCats = animals.some(animal => animal.type === 'cat');
 
 	//Every example
-	var areAllDogs = animals.every(animal => animal.eyes === 2);
+	var areAllDogs = animals.every(animal => animal.type === 'dog');
 
 	//Reduce example
 	var fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
+
+
+	var getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
+		.reduce((newName, animal) => newName+animal.name, '');
 
 
 	//Auto execute itself
