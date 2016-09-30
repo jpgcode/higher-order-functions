@@ -9,7 +9,7 @@ All other functions are first-order functions.
 
 
 <p align="center">
-    <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/demo/intro.jpg">
+    <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/higher-order-functions/master/firstclass.png">
 </p>
 
 > Experiments with higher order functions (array methods)
