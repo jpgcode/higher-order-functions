@@ -1,16 +1,15 @@
 'use strict';
 
 //Using array methods
+const animals = [
+	{name: 'Milo', type: 'cat', eyes: 2},
+	{name: 'Peluza', type: 'cat', eyes: 2},
+	{name: 'Yummy', type: 'cat', eyes: 2},
+	{name: 'Doggy', type: 'dog', eyes: 2},
+	{name: 'Sammy', type: 'dog', eyes: 2}
+];
 
 const higherOrderFunctionsModule = (function(){
-
-	const animals = [
-		{name: 'Milo', type: 'cat', eyes: 2},
-		{name: 'Peluza', type: 'cat', eyes: 2},
-		{name: 'Yummy', type: 'cat', eyes: 2},
-		{name: 'Doggy', type: 'dog', eyes: 2},
-		{name: 'Sammy', type: 'dog', eyes: 2}
-	];
 
 	const init = function(){
 		//Get all animals (map)
@@ -80,7 +79,7 @@ const higherOrderFunctionsModule = (function(){
 	//Reduce example
 	const fusionedAnimals = animals.reduce((newName, animal) => newName+animal.name, '');
 
-
+	//Chained methods example
 	const getDogsAndFusionThem = animals.filter(animal => animal.type === 'dog')
 		.reduce((newName, animal) => newName+animal.name, '');
 
