@@ -16,7 +16,7 @@ All other functions are **first-order** functions.
 
 
 Use this array for all our examples:
-```
+```js
 var animals = [
 	{name: 'Milo', type: 'cat', eyes: 2},
 	{name: 'Peluza', type: 'cat', eyes: 2},
