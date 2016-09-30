@@ -1,11 +1,11 @@
 #Higher order functions
-A higher-order function is a function that does at least one of the following:
+A **higher-order** function is a function that does at least one of the following:
 
--Takes one or more functions as an input
+-Takes one or more functions as an input <br />
 
 -Outputs a function
 
-All other functions are first-order functions.
+All other functions are **first-order** functions.
 
 
 <p align="center">
@@ -138,8 +138,8 @@ DoggySammy
 ```
 
 More info can be found in: 
-[Catching up with JS higher order functions](https://www.airpair.com/javascript/posts/catching-up-with-javascript-higher-order-functions)
-[Fun with higher order functions](https://derickbailey.com/2015/10/21/fun-with-higher-order-functions-in-javascript/)
+[Catching up with JS higher order functions](https://www.airpair.com/javascript/posts/catching-up-with-javascript-higher-order-functions)<br />
+[Fun with higher order functions](https://derickbailey.com/2015/10/21/fun-with-higher-order-functions-in-javascript/)<br />
 [Elquent Javascript - Higher Order functions](http://eloquentjavascript.net/05_higher_order.html)
 
 ## Authors
